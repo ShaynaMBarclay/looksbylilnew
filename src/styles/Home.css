@@ -1,0 +1,111 @@
+/* -------- Hero -------- */
+.home-hero {
+  background: var(--white);
+  border-bottom: 3px solid var(--ink);
+}
+
+.home-hero__inner {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem;
+  align-items: center;
+  padding: clamp(2.5rem, 7vw, 5rem) clamp(1rem, 4vw, 2rem);
+}
+
+.home-hero__lede {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  color: var(--green-dark);
+  margin: 0.25rem 0 0.75rem;
+}
+
+.home-hero__sub {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  max-width: 46ch;
+}
+
+.home-hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.home-hero__panel {
+  --check: 26px;
+  min-height: 320px;
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  display: grid;
+  place-items: center;
+  box-shadow: var(--shadow);
+}
+
+.home-hero__badge {
+  background: var(--white);
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  width: 190px;
+  height: 190px;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  transform: rotate(-8deg);
+  box-shadow: 5px 5px 0 var(--orange);
+}
+.home-hero__badge span {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  color: var(--green-deep);
+}
+.home-hero__badge span:nth-child(2) { color: var(--orange-deep); }
+
+/* -------- Values -------- */
+.home-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.home-divider {
+  --check-a: var(--orange);
+  --check-b: var(--orange-deep);
+}
+
+/* -------- Services -------- */
+.home-services__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.home-services__all { font-weight: 700; white-space: nowrap; }
+
+.home-services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* -------- CTA -------- */
+.home-cta {
+  background: var(--green);
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+}
+.home-cta__inner { text-align: center; max-width: 640px; }
+.home-cta h2 { color: var(--white); }
+.home-cta p { color: var(--cream); margin-bottom: 1.5rem; }
+
+@media (max-width: 860px) {
+  .home-hero__inner { grid-template-columns: 1fr; }
+  .home-hero__panel { min-height: 240px; }
+  .home-values,
+  .home-services__grid { grid-template-columns: 1fr; }
+}

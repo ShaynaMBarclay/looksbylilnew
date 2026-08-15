@@ -1,0 +1,55 @@
+.about-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.about-body p {
+  font-size: 1.12rem;
+  margin: 0 0 1.1rem;
+  color: var(--ink);
+}
+.about-body p:first-child {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--green-dark);
+}
+
+.about-aside {
+  --check: 20px;
+  min-height: 240px;
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  display: grid;
+  place-items: center;
+  box-shadow: var(--shadow);
+}
+.about-aside__card {
+  background: var(--white);
+  border: 3px solid var(--ink);
+  padding: 1rem 1.4rem;
+  border-radius: 999px;
+  transform: rotate(-4deg);
+  box-shadow: 4px 4px 0 var(--orange);
+}
+.about-aside__card p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--green-deep);
+}
+
+.about-values-section { background: var(--cream); }
+.about-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.about-values .value-card { background: var(--white); }
+
+@media (max-width: 860px) {
+  .about-layout { grid-template-columns: 1fr; }
+  .about-values { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,31 @@
+.value-card {
+  background: var(--cream);
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.value-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 8px;
+  background: linear-gradient(
+    90deg,
+    var(--green) 0 33%,
+    var(--orange) 33% 66%,
+    var(--white) 66% 100%
+  );
+}
+
+.value-card__title {
+  margin-top: 0.5rem;
+  color: var(--green-deep);
+}
+
+.value-card__blurb {
+  margin: 0;
+  color: var(--ink-soft);
+}

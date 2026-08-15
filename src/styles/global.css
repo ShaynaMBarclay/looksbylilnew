@@ -1,0 +1,138 @@
+
+:root {
+  /* Greens */
+  --green: #558632;     
+  --green-dark: #3f6624;
+  --green-deep: #2c4a18;
+
+  /* Oranges */
+  --orange: #e8792b;
+  --orange-light: #f4a24c;
+  --orange-deep: #c85f14;
+
+  /* Neutrals */
+  --white: #fdfaf3;    
+  --cream: #f5efe0;
+  --ink: #23301a;          
+  --ink-soft: #4a5540;
+
+
+  --bg: var(--white);
+  --surface: #ffffff;
+  --border: rgba(35, 48, 26, 0.14);
+
+  --font-display: 'Bricolage Grotesque', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --maxw: 1120px;
+  --radius: 14px;
+  --shadow: 0 10px 0 rgba(35, 48, 26, 0.08);
+
+  --check: 22px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  line-height: 1.05;
+  margin: 0 0 0.4em;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2.4rem, 6vw, 4.2rem); }
+h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); }
+h3 { font-size: 1.3rem; }
+
+a {
+  color: var(--green-dark);
+  text-decoration: none;
+}
+a:hover { color: var(--orange-deep); }
+
+img { max-width: 100%; display: block; }
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 2rem);
+}
+
+.section {
+  padding: clamp(3rem, 8vw, 6rem) 0;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--orange-deep);
+  margin-bottom: 0.6rem;
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  border: 3px solid var(--ink);
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.btn:active { transform: translate(4px, 4px); box-shadow: 0 0 0 var(--ink); }
+
+.btn--primary {
+  background: var(--orange);
+  color: var(--ink);
+}
+.btn--primary:hover { background: var(--orange-light); color: var(--ink); }
+
+.btn--green {
+  background: var(--green);
+  color: var(--white);
+}
+.btn--green:hover { background: var(--green-dark); color: var(--white); }
+
+.checker {
+  --check-a: var(--green);
+  --check-b: var(--green-dark);
+  background-image:
+    conic-gradient(
+      var(--check-a) 90deg,
+      var(--check-b) 90deg 180deg,
+      var(--check-a) 180deg 270deg,
+      var(--check-b) 270deg
+    );
+  background-size: calc(var(--check) * 2) calc(var(--check) * 2);
+}
+
+.checker-strip {
+  height: 26px;
+  --check: 13px;
+}
