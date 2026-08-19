@@ -15,7 +15,7 @@
 }
 
 .nav__brand {
-  font-family: var(--font-display);
+  font-family: var(--font-heading);
   font-weight: 800;
   font-size: 1.5rem;
   color: var(--green-dark);
@@ -50,7 +50,6 @@
   gap: 5px;
   background: none;
   border: none;
-  cursor: pointer;
   padding: 6px;
 }
 .nav__toggle span {

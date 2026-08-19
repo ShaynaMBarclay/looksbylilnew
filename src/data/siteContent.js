@@ -2,8 +2,7 @@ export const business = {
   name: 'Looks By Lil',            
   tagline: 'Fresh cuts in a space where everyone belongs.', 
   address: '236 Main St, Gaithersburg, MD 20878', 
-  phone: '(301) 000-0000',        
-  email: 'hello@looksbylil.com',   
+  phone: '(304) 790-9018',          
   bookingUrl: 'https://www.looksbylil.com/', 
   brandColor: '#558632',        
 }
@@ -69,19 +68,19 @@ export const values = [
     id: 'lgbtq',
     title: 'LGBTQ+ Friendly',
     blurb:
-      "This is an affirming chair. You'll be greeted with the name and pronouns you use, and cut for the look that feels like you — no gendered menus, no assumptions.",
+      "This is an affirming chair. You'll be greeted with the name and pronouns you use, and cut for the look that feels like you, no gendered menus, no assumptions.",
   },
   {
     id: 'autism',
     title: 'Autism & Sensory Friendly',
     blurb:
-      'Appointments can be adapted for sensory needs: dimmer lights, quieter setting, clear step-by-step communication, and breaks whenever you need them.',
+      'Appointments can be adapted for sensory needs with patience and understanding, we have specific services for you just for you and want to make your experience the best we can.',
   },
   {
     id: 'skilled',
     title: 'Skilled Barbering',
     blurb:
-      'Fades, tapers, beard work, and classic cuts done with care and precision — every visit starts with a real conversation about what you want.',
+      'Fades, tapers, beard work, and classic cuts done with care and precision, every visit starts with a real conversation about what you want.',
   },
 ]
 

@@ -13,7 +13,7 @@ export default function Home() {
       <section className="home-hero">
         <div className="container home-hero__inner">
           <div className="home-hero__text">
-            <span className="eyebrow">Gaithersburg, MD · Barber Shop</span>
+            <span className="eyebrow">Kentlands, MD · Barber Shop</span>
             <h1>{business.name}</h1>
             <p className="home-hero__lede">{business.tagline}</p>
             <p className="home-hero__sub">
@@ -84,8 +84,7 @@ export default function Home() {
         <div className="container home-cta__inner">
           <h2>Ready for a fresh look?</h2>
           <p>
-            Booking online takes a minute. Need a sensory-friendly setup? Just
-            mention it when you book and we'll have it ready.
+            Booking online takes a minute. Need a sensory-friendly setup? Review our detailed services to find your best fit, before booking.
           </p>
           <a
             href={business.bookingUrl}

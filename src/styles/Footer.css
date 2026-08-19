@@ -18,7 +18,7 @@
 }
 
 .footer h3,
-.footer h4 { color: var(--white); }
+.footer h4 { color: var(--white); font-family: var(--font-heading); margin-top: 0.5rem; }
 
 .footer__brand {
   font-size: 1.6rem;

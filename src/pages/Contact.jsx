@@ -1,17 +1,33 @@
 import { business, hours } from '../data/siteContent.js'
+import door from '../assets/doorfront.webp'
 import '../styles/Contact.css'
-import '../styles/Services.css' 
+import '../styles/Services.css'
 
 export default function Contact() {
   const mapQuery = encodeURIComponent(business.address)
 
   return (
     <div className="contact-page">
-      <section className="page-hero">
-        <div className="container page-hero__inner">
-          <span className="eyebrow">Come see us</span>
-          <h1>Contact &amp; Visit</h1>
-          <p>We're on Main Street in Gaithersburg. Walk-ins welcome when the chair's open — booking ahead is safest.</p>
+      <section className="section contact-visit-section">
+        <div className="container contact-visit">
+          <div className="contact-visit__text">
+            <span className="eyebrow">Come see us</span>
+            <h1>Contact &amp; Visit</h1>
+            <p>
+              We're on Main Street in Gaithersburg. Walk-ins welcome when the
+              chair's open, booking ahead is safest.
+            </p>
+            <p>
+              Tan door with "Salon Concept Suites." Walk up two flights of
+              stairs and we are on the right! Click the address below for
+              directions.
+            </p>
+          </div>
+          <img
+            src={door}
+            alt="Tan front door with Salon Concept Suites signage"
+            className="contact-visit__img"
+          />
         </div>
       </section>
 

@@ -38,6 +38,35 @@
   display: block;
 }
 
+/* -------- Come see us -------- */
+.contact-visit {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.contact-visit__text h1 {
+  color: var(--green-dark);
+  margin-bottom: 0.75rem;
+}
+.contact-visit__text .eyebrow {
+  margin-bottom: 0.5rem;
+}
+.contact-visit__text p {
+  margin: 0 0 1rem;
+  color: var(--ink-soft);
+}
+
+.contact-visit__img {
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: 6px 6px 0 var(--orange);
+  width: 100%;
+  height: auto;
+}
+
 @media (max-width: 860px) {
   .contact-layout { grid-template-columns: 1fr; }
+  .contact-visit { grid-template-columns: 1fr; }
 }
