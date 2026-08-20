@@ -1,5 +1,6 @@
 import { about, values } from '../data/siteContent.js'
 import ValueCard from '../components/ValueCard.jsx'
+import lilyImg from '../assets/lily.png'
 import '../styles/About.css'
 import '../styles/Services.css' 
 
@@ -20,10 +21,16 @@ export default function About() {
               <p key={i}>{para}</p>
             ))}
           </div>
-          <aside className="about-aside checker" aria-hidden="true">
-            <div className="about-aside__card">
-              <p>Inclusive by design</p>
-            </div>
+          <aside className="about-aside">
+            <img
+              src={lilyImg}
+              alt="Lily, owner of Looks By Lil"
+              className="about-aside__img"
+            />
+            <p className="about-aside__blurb">
+              <strong>Inclusive by design.</strong> An affirming, sensory-aware
+              chair where everyone is welcome exactly as they are.
+            </p>
           </aside>
         </div>
       </section>
