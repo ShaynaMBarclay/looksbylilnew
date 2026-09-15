@@ -1,16 +1,20 @@
 .about-layout {
   display: grid;
-  grid-template-columns: 1.4fr 0.6fr;
+  grid-template-columns: 1fr 0.85fr;
   gap: 2.5rem;
-  align-items: start;
+  align-items: center;
 }
 
+.about-body h2 {
+  color: var(--green-deep);
+  margin-bottom: 1rem;
+}
 .about-body p {
   font-size: 1.12rem;
   margin: 0 0 1.1rem;
   color: var(--ink);
 }
-.about-body p:first-child {
+.about-body p:first-of-type {
   font-family: var(--font-display);
   font-size: 1.4rem;
   color: var(--green-dark);
@@ -23,12 +27,12 @@
 }
 .about-aside__img {
   width: 100%;
-  height: 370px;
+  height: 480px;
   object-fit: cover;
   object-position: center;
   border: 3px solid var(--ink);
   border-radius: var(--radius);
-  
+
   display: block;
 }
 
@@ -52,7 +56,130 @@
 }
 .about-values .value-card { background: var(--white); }
 
+/* ---- Calm Cut — sensory hour ---- */
+.about-calmcut-section {
+  --check-a: var(--green);
+  --check-b: var(--green-dark);
+  position: relative;
+  background: var(--cream);
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+}
+
+.calmcut-head {
+  max-width: 720px;
+  margin-bottom: 2rem;
+}
+.calmcut-head h2 { color: var(--green-deep); }
+
+.calmcut-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 0.9fr;
+  gap: 2rem;
+  align-items: start;
+}
+.calmcut-layout > * { min-width: 0; }
+
+/* Text card — matches service-card styling */
+.calmcut-card {
+  background: var(--surface);
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: 6px 6px 0 var(--green);
+  overflow: hidden;
+}
+.calmcut-card__body {
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+}
+.calmcut-card__body p {
+  font-size: 1.08rem;
+  line-height: 1.65;
+  margin: 0 0 1.1rem;
+  color: var(--ink);
+}
+.calmcut-card__body p:first-child {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--green-dark);
+}
+.calmcut-card__cta {
+  margin-top: 0.5rem;
+}
+
+/* Instagram side */
+.calmcut-social {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 0;
+}
+.calmcut-social__frame {
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: 6px 6px 0 var(--orange);
+  background: var(--white);
+  overflow: hidden;
+  padding: 0.75rem;
+  min-width: 0;
+}
+.calmcut-social__frame .instagram-media {
+  border-radius: calc(var(--radius) - 6px) !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+.calmcut-social__note {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ============ RESPONSIVE ============ */
+
+/* Tablets — stack everything */
 @media (max-width: 860px) {
-  .about-layout { grid-template-columns: 1fr; }
+  .about-layout { grid-template-columns: 1fr; align-items: start; }
+  .about-aside__img { height: 370px; }
   .about-values { grid-template-columns: 1fr; }
+  .calmcut-layout { grid-template-columns: 1fr; }
+}
+
+/* Small phones */
+@media (max-width: 520px) {
+  .about-aside__img { height: 300px; }
+  .about-body p:first-of-type { font-size: 1.25rem; }
+  .calmcut-card__body p:first-child { font-size: 1.15rem; }
+}
+
+/* Teeny old phones */
+@media (max-width: 360px) {
+  .about-aside__img { height: 240px; }
+  .about-body p { font-size: 1.02rem; }
+  .calmcut-card__body p { font-size: 1rem; }
+}
+
+/* Large desktop */
+@media (min-width: 1400px) {
+  .about-aside__img { height: 560px; }
+}
+
+/* Ultrawide — bigger image + text */
+@media (min-width: 1800px) {
+  .about-layout { gap: 4rem; }
+  .about-aside__img { height: 640px; }
+  .about-body p { font-size: 1.3rem; }
+  .about-body p:first-of-type { font-size: 1.65rem; }
+  .calmcut-head { max-width: 900px; }
+  .calmcut-card__body p { font-size: 1.25rem; }
+}
+
+/* 4K */
+@media (min-width: 2560px) {
+  .about-aside__img { height: 820px; }
+  .about-body p { font-size: 1.5rem; }
+  .about-body p:first-of-type { font-size: 1.95rem; }
+  .about-values { gap: 2.5rem; }
+  .calmcut-layout { gap: 3rem; }
+  .calmcut-card__body p { font-size: 1.45rem; }
 }

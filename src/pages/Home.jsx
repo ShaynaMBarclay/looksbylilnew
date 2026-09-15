@@ -5,7 +5,10 @@ import ValueCard from '../components/ValueCard.jsx'
 import '../styles/Home.css'
 
 export default function Home() {
-  const featured = services.slice(0, 3)
+  const featuredIds = ['skin-fade', 'classic-short-cut', 'mid-length-haircut']
+  const featured = featuredIds
+    .map((id) => services.find((s) => s.id === id))
+    .filter(Boolean)
 
   return (
     <div className="home">

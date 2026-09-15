@@ -68,9 +68,47 @@
 }
 .footer__bottom p { color: rgba(255, 255, 255, 0.7); }
 
+/* ============ RESPONSIVE ============ */
+
+/* Tablets — 2 columns */
 @media (max-width: 860px) {
   .footer__inner { grid-template-columns: 1fr 1fr; }
 }
+
+/* Small phones — single column */
 @media (max-width: 520px) {
-  .footer__inner { grid-template-columns: 1fr; }
+  .footer__inner { grid-template-columns: 1fr; gap: 1.5rem; }
+  .footer__bottom { flex-direction: column; }
+}
+
+/* Teeny old phones */
+@media (max-width: 360px) {
+  .footer { margin-top: 2.5rem; }
+  .footer__brand { font-size: 1.35rem; }
+  .footer__col .btn { width: 100%; text-align: center; }
+}
+
+/* Large desktop */
+@media (min-width: 1400px) {
+  .footer__inner { gap: 3rem; }
+}
+
+/* Ultrawide */
+@media (min-width: 1800px) {
+  .footer__inner { gap: 4rem; padding-top: 4rem; }
+  .footer__brand { font-size: 2rem; }
+  .footer h4 { font-size: 1.25rem; }
+  .footer__hours li { font-size: 1.1rem; }
+  .footer__bottom { font-size: 1rem; }
+}
+
+/* 4K */
+@media (min-width: 2560px) {
+  .footer { margin-top: 6rem; }
+  .footer__inner { gap: 5rem; padding-top: 5rem; padding-bottom: 3rem; }
+  .footer__brand { font-size: 2.6rem; }
+  .footer h4 { font-size: 1.55rem; }
+  .footer__hours li { font-size: 1.3rem; }
+  .footer p { font-size: 1.3rem; }
+  .footer__bottom { font-size: 1.2rem; }
 }

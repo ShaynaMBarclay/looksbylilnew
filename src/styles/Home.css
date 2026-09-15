@@ -104,13 +104,66 @@
   border-top: 3px solid var(--ink);
   border-bottom: 3px solid var(--ink);
 }
-.home-cta__inner { text-align: center; max-width: 640px; }
+.home-cta__inner { text-align: center; max-width: 640px; margin: 0 auto; }
 .home-cta h2 { color: var(--white); }
 .home-cta p { color: var(--cream); margin-bottom: 1.5rem; }
 
+/* ============ RESPONSIVE ============ */
+
+/* Tablets — stack hero, single-column grids */
 @media (max-width: 860px) {
   .home-hero__inner { grid-template-columns: 1fr; }
-  .home-hero__panel { min-height: 240px; }
+  .home-hero__panel { min-height: 240px; margin: 1.5rem auto 0; }
   .home-values,
   .home-services__grid { grid-template-columns: 1fr; }
+  .home-services__head { flex-direction: column; align-items: flex-start; }
+}
+
+/* Small phones */
+@media (max-width: 520px) {
+  .home-hero__panel { max-width: 100%; min-height: 200px; margin: 1.25rem auto 0; }
+  .home-hero__badge {
+    width: 150px;
+    height: 150px;
+  }
+  .home-hero__badge span { font-size: 1.2rem; }
+  .home-hero__sub { max-width: 100%; }
+}
+
+/* Teeny old phones */
+@media (max-width: 360px) {
+  .home-hero__inner { gap: 1.5rem; }
+  .home-hero__panel { min-height: 170px; }
+  .home-hero__badge {
+    width: 128px;
+    height: 128px;
+    box-shadow: 4px 4px 0 var(--orange);
+  }
+  .home-hero__badge span { font-size: 1.05rem; }
+  .home-hero__cta { gap: 0.75rem; }
+  .home-hero__cta .btn { width: 100%; text-align: center; }
+}
+
+/* Large desktop — 4-up services if room */
+@media (min-width: 1400px) {
+  .home-hero__panel { max-width: 500px; min-height: 380px; }
+  .home-hero__badge { width: 220px; height: 220px; }
+}
+
+/* Ultrawide — roomier hero */
+@media (min-width: 1800px) {
+  .home-hero__inner { gap: 4rem; }
+  .home-hero__panel { max-width: 560px; min-height: 440px; }
+  .home-hero__badge { width: 260px; height: 260px; }
+  .home-hero__badge span { font-size: 1.9rem; }
+  .home-cta__inner { max-width: 820px; }
+}
+
+/* 4K — bigger badge, wider gaps */
+@media (min-width: 2560px) {
+  .home-hero__panel { max-width: 680px; min-height: 560px; }
+  .home-hero__badge { width: 340px; height: 340px; box-shadow: 8px 8px 0 var(--orange); }
+  .home-hero__badge span { font-size: 2.5rem; }
+  .home-values,
+  .home-services__grid { gap: 2.5rem; }
 }

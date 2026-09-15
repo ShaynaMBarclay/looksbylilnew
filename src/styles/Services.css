@@ -19,10 +19,100 @@
   border-radius: 8px;
 }
 
+/* ---- How to book ---- */
+.booking-how { padding-bottom: 0; }
+
+.booking-how__card {
+  background: var(--surface);
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: 6px 6px 0 var(--green);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.booking-how__intro { max-width: 640px; }
+.booking-how__intro h2 { color: var(--green-deep); }
+.booking-how__intro p {
+  font-size: 1.1rem;
+  color: var(--ink);
+  margin: 0.5rem 0 0;
+}
+
+.booking-steps {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.booking-step {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  background: var(--cream);
+  border: 3px solid var(--ink);
+  border-radius: var(--radius);
+  padding: 1.1rem;
+}
+.booking-step strong {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--green-deep);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.booking-step p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+.booking-step__num {
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--white);
+  background: var(--orange);
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+.booking-how__cta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.btn--book {
+  font-size: 1.15rem;
+  padding: 1rem 2.25rem;
+}
+.booking-how__note {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  line-height: 1.45;
+  max-width: 420px;
+}
+
+/* ---- Menu ---- */
+.services-menu h2 { color: var(--green-deep); }
+.services-menu .eyebrow { margin-top: 0; }
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+  align-items: start;
+  margin-top: 1.5rem;
 }
 
 .services-note {
@@ -34,6 +124,51 @@
 
 .services-cta { text-align: center; margin-top: 1.5rem; }
 
+/* ============ RESPONSIVE ============ */
+
+/* Tablets — stack the 3 steps */
+@media (max-width: 860px) {
+  .booking-steps { grid-template-columns: 1fr; }
+}
+
+/* Small tablets / large phones — single-column menu */
 @media (max-width: 700px) {
   .services-grid { grid-template-columns: 1fr; }
+}
+
+/* Small phones — full-width book button, stacked CTA */
+@media (max-width: 520px) {
+  .booking-how__cta { flex-direction: column; align-items: stretch; }
+  .btn--book { width: 100%; text-align: center; }
+  .booking-how__note { max-width: 100%; text-align: center; }
+}
+
+/* Teeny old phones — tighten the step cards */
+@media (max-width: 360px) {
+  .booking-step { padding: 0.85rem; gap: 0.6rem; }
+  .booking-step__num { width: 32px; height: 32px; font-size: 1.05rem; }
+  .booking-step strong { font-size: 1rem; }
+  .booking-how__intro p { font-size: 1rem; }
+}
+
+/* Large desktop — 3-up menu */
+@media (min-width: 1400px) {
+  .services-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Ultrawide — roomier, 3-up menu holds */
+@media (min-width: 1800px) {
+  .services-grid { gap: 2rem; }
+  .booking-steps { gap: 1.75rem; }
+  .booking-how__intro { max-width: 780px; }
+  .booking-how__intro p { font-size: 1.25rem; }
+}
+
+/* 4K — 4-up menu, bigger step badges */
+@media (min-width: 2560px) {
+  .services-grid { grid-template-columns: repeat(4, 1fr); gap: 2.5rem; }
+  .booking-step__num { width: 48px; height: 48px; font-size: 1.5rem; }
+  .booking-step strong { font-size: 1.35rem; }
+  .booking-step p { font-size: 1.1rem; }
+  .btn--book { font-size: 1.4rem; padding: 1.2rem 2.75rem; }
 }

@@ -66,7 +66,46 @@
   height: auto;
 }
 
+/* ============ RESPONSIVE ============ */
+
+/* Tablets — stack */
 @media (max-width: 860px) {
   .contact-layout { grid-template-columns: 1fr; }
   .contact-visit { grid-template-columns: 1fr; }
+}
+
+/* Small phones — shorter map */
+@media (max-width: 520px) {
+  .contact-map,
+  .contact-map iframe { min-height: 300px; }
+}
+
+/* Teeny old phones */
+@media (max-width: 360px) {
+  .contact-map,
+  .contact-map iframe { min-height: 240px; }
+  .contact-hours li { font-size: 0.95rem; }
+}
+
+/* Large desktop */
+@media (min-width: 1400px) {
+  .contact-map,
+  .contact-map iframe { min-height: 460px; }
+}
+
+/* Ultrawide */
+@media (min-width: 1800px) {
+  .contact-layout { gap: 4rem; }
+  .contact-map,
+  .contact-map iframe { min-height: 540px; }
+  .contact-block h3 { font-size: 1.5rem; }
+  .contact-hours li { font-size: 1.15rem; }
+}
+
+/* 4K */
+@media (min-width: 2560px) {
+  .contact-map,
+  .contact-map iframe { min-height: 680px; }
+  .contact-hours li { font-size: 1.35rem; padding: 0.45rem 0; }
+  .contact-block { margin-bottom: 2.5rem; }
 }
