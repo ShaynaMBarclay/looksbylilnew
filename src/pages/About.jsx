@@ -12,13 +12,11 @@ export default function About() {
     const SCRIPT_SRC = 'https://www.instagram.com/embed.js'
     const process = () => window.instgrm?.Embeds?.process()
 
-    // If the script is already loaded, just (re)process the embed.
     if (window.instgrm) {
       process()
       return
     }
 
-    // Otherwise load it once, then process on load.
     let script = document.querySelector(`script[src="${SCRIPT_SRC}"]`)
     if (!script) {
       script = document.createElement('script')

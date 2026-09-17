@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { business, hours } from '../data/siteContent.js'
+import { business } from '../data/siteContent.js'
 import '../styles/Footer.css'
 
 export default function Footer() {
@@ -33,15 +33,14 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="footer__col">
-          <h4>Hours</h4>
-          <ul className="footer__hours">
-            {hours.map((h) => (
-              <li key={h.day}>
-                <span>{h.day}</span>
-                <span>{h.time}</span>
-              </li>
-            ))}
+               <div className="footer__col">
+          <h4>Follow</h4>
+          <ul className="footer__nav">
+            <li>
+              <a href={business.instagramUrl} target="_blank" rel="noreferrer">
+                {business.instagramHandle}
+              </a>
+            </li>
           </ul>
         </div>
 

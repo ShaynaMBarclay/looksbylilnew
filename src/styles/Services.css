@@ -126,24 +126,24 @@
 
 /* ============ RESPONSIVE ============ */
 
-/* Tablets — stack the 3 steps */
+/* Tablets */
 @media (max-width: 860px) {
   .booking-steps { grid-template-columns: 1fr; }
 }
 
-/* Small tablets / large phones — single-column menu */
+/* Small tablets / large phones */
 @media (max-width: 700px) {
   .services-grid { grid-template-columns: 1fr; }
 }
 
-/* Small phones — full-width book button, stacked CTA */
+/* Small phones */
 @media (max-width: 520px) {
   .booking-how__cta { flex-direction: column; align-items: stretch; }
   .btn--book { width: 100%; text-align: center; }
   .booking-how__note { max-width: 100%; text-align: center; }
 }
 
-/* Teeny old phones — tighten the step cards */
+/* Teeny old phones */
 @media (max-width: 360px) {
   .booking-step { padding: 0.85rem; gap: 0.6rem; }
   .booking-step__num { width: 32px; height: 32px; font-size: 1.05rem; }
@@ -151,12 +151,12 @@
   .booking-how__intro p { font-size: 1rem; }
 }
 
-/* Large desktop — 3-up menu */
+/* Large desktop */
 @media (min-width: 1400px) {
   .services-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
-/* Ultrawide — roomier, 3-up menu holds */
+/* Ultrawide */
 @media (min-width: 1800px) {
   .services-grid { gap: 2rem; }
   .booking-steps { gap: 1.75rem; }
@@ -164,7 +164,7 @@
   .booking-how__intro p { font-size: 1.25rem; }
 }
 
-/* 4K — 4-up menu, bigger step badges */
+/* 4K  */
 @media (min-width: 2560px) {
   .services-grid { grid-template-columns: repeat(4, 1fr); gap: 2.5rem; }
   .booking-step__num { width: 48px; height: 48px; font-size: 1.5rem; }

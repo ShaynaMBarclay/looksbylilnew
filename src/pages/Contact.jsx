@@ -1,4 +1,4 @@
-import { business, hours } from '../data/siteContent.js'
+import { business } from '../data/siteContent.js'
 import door from '../assets/doorfront.webp'
 import '../styles/Contact.css'
 import '../styles/Services.css'
@@ -49,16 +49,13 @@ export default function Contact() {
                 <a href={`mailto:${business.email}`}>{business.email}</a>
               </p>
             </div>
-            <div className="contact-block">
-              <h3>Hours</h3>
-              <ul className="contact-hours">
-                {hours.map((h) => (
-                  <li key={h.day}>
-                    <span>{h.day}</span>
-                    <span>{h.time}</span>
-                  </li>
-                ))}
-              </ul>
+                        <div className="contact-block">
+              <h3>Follow along</h3>
+              <p>
+                <a href={business.instagramUrl} target="_blank" rel="noreferrer">
+                  {business.instagramHandle}
+                </a>
+              </p>
             </div>
             <a
               href={business.bookingUrl}

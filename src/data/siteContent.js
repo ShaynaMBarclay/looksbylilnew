@@ -15,7 +15,7 @@ import fullService from '../assets/fullservice.png'
 //import grayBlendingColor from '../assets/gray-blending-color.jpg'
 //import grayBlendingBeard from '../assets/gray-blending-beard.jpg'
 //import highFives from '../assets/high-fives.jpg'
-//import beardTrimAddon from '../assets/beard-trim-addon.jpg'
+import beardTrimAddon from '../assets/beard.png'
 
 export const business = {
   name: 'Looks By Lil',
@@ -24,6 +24,8 @@ export const business = {
   phone: '(304) 790-9018',
   bookingUrl: 'https://book.squareup.com/appointments/9trdv592na54cd/location/L1FEC39XS0HR8/services',
   brandColor: '#558632',
+  instagramUrl: 'https://www.instagram.com/_looksby_lil/',
+  instagramHandle: '@_looksby_lil',
 }
 
 export const hours = [
@@ -37,7 +39,6 @@ export const hours = [
 ]
 
 export const services = [
-  // --- Services with photos ---
   {
     id: 'classic-short-cut',
     name: 'Classic Short Cut',
@@ -69,7 +70,7 @@ export const services = [
     duration: '25 min',
     image: babysFirstHaircut,
     imagePosition: 'top',
-    description: 'A gentle, stress free first haircut for babies and toddlers. Little ones can sit on a parent\'s lap, with plenty of patience and care throughout. Includes a keepsake certificate and optional lock of hair. [placeholder — edit later]',
+    description: 'A gentle, stress free first haircut for babies and toddlers. Little ones can sit on a parent\'s lap, with plenty of patience and care throughout. Includes a keepsake certificate and optional lock of hair.',
   },
   {
     id: 'mid-length-haircut',
@@ -96,6 +97,14 @@ export const services = [
     description: 'A seamless fade taken all the way down for a smooth, modern finish.',
   },
   {
+    id: 'beard-trim-addon',
+    name: 'Beard Trim (Add-on)',
+    price: '$12.00',
+    duration: '5 min',
+    image: beardTrimAddon,
+    description: 'A precise beard clean-up to sharpen lines and maintain a polished look.',
+  },
+  {
     id: 'long-layer-haircut',
     name: 'Long Layer Haircut',
     price: '$60.00',
@@ -111,15 +120,13 @@ export const services = [
     image: fullService,
     description: 'A complete experience, cleanse, tailored cut, and finished styling for a refreshed feel. Typically for longer, layered cuts. Includes Shampoo, Cut, and Blowdry.',
   },
-
-  // --- Services without photos yet ---
    {
     id: 'calm-cut',
     name: 'Calm Cut - A Sensory Hour Haircut',
     price: '$40.00',
     duration: '1 hr',
     // image: calmCut,
-    description: 'A patient, unhurried haircut experience designed for comfort, trust, and ease. A service for those with sensory issues that may need more time getting acclimated to me, the shop and idea of a haircut. [placeholder — edit later]',
+    description: 'A patient, unhurried haircut experience designed for comfort, trust, and ease. A service for those with sensory issues that may need more time getting acclimated to me, the shop and idea of a haircut.',
   },
   {
     id: 'chlorine-cleanse',
@@ -175,16 +182,9 @@ export const services = [
     price: 'Free',
     duration: '5 min',
     // image: highFives,
-    description: 'Placeholder description — edit later.',
+    description: 'Complimentary and always available. Results depend entirely on your follow-through, dont miss.',
   },
-  {
-    id: 'beard-trim-addon',
-    name: 'Beard Trim (Add-on)',
-    price: '$12.00',
-    duration: '5 min',
-    // image: beardTrimAddon,
-    description: 'A precise beard clean-up to sharpen lines and maintain a polished look.',
-  },
+  
 ]
 
 export const values = [

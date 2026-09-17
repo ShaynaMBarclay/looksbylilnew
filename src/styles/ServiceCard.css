@@ -58,7 +58,7 @@
 
 /* ============ RESPONSIVE ============ */
 
-/* Teeny old phones — tighten padding, smaller title/price */
+/* Teeny old phones */
 @media (max-width: 360px) {
   .service-card__body { padding: 1.1rem; }
   .service-card__head { flex-wrap: wrap; gap: 0.35rem; }
@@ -67,12 +67,12 @@
   .service-card__desc { font-size: 0.95rem; }
 }
 
-/* Ultrawide — a touch more padding */
+/* Ultrawide */
 @media (min-width: 1800px) {
   .service-card__body { padding: 1.85rem; }
 }
 
-/* 4K — bigger padding + shadow to match the scaled-up layout */
+/* 4K */
 @media (min-width: 2560px) {
   .service-card { box-shadow: 9px 9px 0 var(--green); }
   .service-card:hover { box-shadow: 12px 12px 0 var(--orange); }

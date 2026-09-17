@@ -245,13 +245,13 @@ img { max-width: 100%; display: block; }
   .section { padding: clamp(2.5rem, 9vw, 3.5rem) 0; }
 }
 
-/* ---- Large desktop: let content breathe ---- */
+/* ---- Large desktop ---- */
 @media (min-width: 1400px) {
   :root { --maxw: 1280px; }
   body { font-size: 18px; }
 }
 
-/* ---- Ultrawide / 1440p: wider container + bigger text ---- */
+/* ---- Ultrawide / 1440 ---- */
 @media (min-width: 1800px) {
   :root {
     --maxw: 1500px;
@@ -262,7 +262,7 @@ img { max-width: 100%; display: block; }
   h2 { font-size: clamp(2.8rem, 3.2vw, 3.4rem); }
 }
 
-/* ---- 4K: scale everything up so the site fills the screen ---- */
+/* ---- 4K ---- */
 @media (min-width: 2560px) {
   :root {
     --maxw: 1840px;

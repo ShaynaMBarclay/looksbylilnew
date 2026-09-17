@@ -56,7 +56,7 @@
 }
 .about-values .value-card { background: var(--white); }
 
-/* ---- Calm Cut — sensory hour ---- */
+/* ---- Calm Cut ---- */
 .about-calmcut-section {
   --check-a: var(--green);
   --check-b: var(--green-dark);
@@ -80,7 +80,6 @@
 }
 .calmcut-layout > * { min-width: 0; }
 
-/* Text card — matches service-card styling */
 .calmcut-card {
   background: var(--surface);
   border: 3px solid var(--ink);
@@ -106,7 +105,6 @@
   margin-top: 0.5rem;
 }
 
-/* Instagram side */
 .calmcut-social {
   display: flex;
   flex-direction: column;
@@ -137,7 +135,7 @@
 
 /* ============ RESPONSIVE ============ */
 
-/* Tablets — stack everything */
+/* Tablets */
 @media (max-width: 860px) {
   .about-layout { grid-template-columns: 1fr; align-items: start; }
   .about-aside__img { height: 370px; }
@@ -164,7 +162,7 @@
   .about-aside__img { height: 560px; }
 }
 
-/* Ultrawide — bigger image + text */
+/* Ultrawide */
 @media (min-width: 1800px) {
   .about-layout { gap: 4rem; }
   .about-aside__img { height: 640px; }

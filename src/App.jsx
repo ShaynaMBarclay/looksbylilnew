@@ -6,12 +6,10 @@ import Home from './pages/Home.jsx'
 import Services from './components/Services.jsx'
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx'
-import SparkleTrail from './components/SparkleTrail.jsx'
 
 export default function App() {
   return (
     <>
-    <SparkleTrail />
       <ScrollToTop />
       <Navbar />
       <main>
